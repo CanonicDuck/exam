@@ -1,10 +1,8 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.scene.image.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.*;
-import javafx.scene.text.*;
 import javafx.stage.Stage;
 
 public class exam extends Application {
@@ -24,8 +22,6 @@ public class exam extends Application {
         ImageView iv1 = new ImageView();
         ImageView iv2 = new ImageView();
         ImageView iv3 = new ImageView();
-        ImageView iv4 = new ImageView();
-
 
         WritableImage im1 = new WritableImage(120, 100);
         for (int i = 0; i < 120; i++) {
@@ -51,16 +47,8 @@ public class exam extends Application {
         }
         iv3.setImage(im3);
 
-        WritableImage im4 = new WritableImage(360, 100);
-        for (int i = 0; i < 360; i++) {
-            for (int j = 0; j < 100; j++) {
-                im4.getPixelWriter().setColor(i,j, Color.hsb(i, (float) j/99, 1));
-            }
-        }
-        iv4.setImage(im4);
-
         h1.getChildren().addAll(iv1, iv2, iv3);
-        window.getChildren().addAll(h1, iv4);
+        window.getChildren().addAll(h1);
         return window;
     }
 
