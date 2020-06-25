@@ -9,6 +9,7 @@ public class exam extends Application {
 
 
 
+    /* экзаменационный коммит */
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setScene(new Scene(initInterface(), 640, 800));
